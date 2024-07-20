@@ -1,18 +1,17 @@
 
 
-import './App.css'
 
-function App() {
+function NotFound() {
 
 
   return (
     <>
       <div className='bg-orange-700'>
-        Hola mundo desde React
+        404 Not Found
       </div>
 
     </>
   )
 }
 
-export default App
+export default NotFound
