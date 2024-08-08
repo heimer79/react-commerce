@@ -1,11 +1,11 @@
-
+import { Layout } from "../../Components/Layout";
 
 export const SignIn = () => {
   return (
     <>
-      <div className='bg-orange-700'>
+      <Layout>
         Sign In
-      </div>
+      </Layout>
     </>
   )
 }

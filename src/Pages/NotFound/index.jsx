@@ -1,12 +1,12 @@
-
+import { Layout } from "../../Components/Layout";
 
 
 export const NotFound = () => {
   return (
     <>
-      <div className='bg-orange-700'>
+      <Layout>
         404 Not Found
-      </div>
+      </Layout>
     </>
   )
 }

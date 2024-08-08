@@ -1,12 +1,12 @@
-
+import { Layout } from "../../Components/Layout";
 
 
 export const MyOrder = () => {
   return (
     <>
-      <div className='bg-orange-700'>
+      <Layout>
         Ny Order
-      </div>
+      </Layout>
     </>
   )
 }
