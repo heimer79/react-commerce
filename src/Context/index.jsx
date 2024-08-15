@@ -1,17 +1,28 @@
 
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 
 
-const ShopContext = createContext()
+export const ShopContext = createContext()
 
 
 
 
 export const ShoppingCartProvider = ({ children }) => {
-  // Add prop validation for 'children'
+
+
+  const [ count, setCount ] = useState(0) 
+
+
+  console.log(count)
+
+
+
   
   return (
-    <ShopContext.Provider>
+    <ShopContext.Provider value={{
+      count,
+      setCount
+    }}>
         { children }
     </ShopContext.Provider>
    

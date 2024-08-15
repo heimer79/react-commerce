@@ -1,6 +1,12 @@
+
+import { useContext } from "react"; // 
+import { ShopContext } from "../../Context"; // Importa el contexto 'ShopContext' para poder acceder a él.
+
+
 // Declara y exporta el componente 'Card'.
 // Recibe 'data' como un prop, que contiene los datos necesarios para renderizar el contenido del componente.
 export const Card = (data) => {
+  const context = useContext(ShopContext) //
   // Retorna el JSX que define la estructura del componente Card.
   return (
     // Contenedor principal de la tarjeta con estilos aplicados, como color de fondo, cursor, tamaño, y bordes redondeados.
@@ -20,7 +26,9 @@ export const Card = (data) => {
         />
         {/* Icono '+' en la esquina superior derecha de la figura. 
              Está dentro de un contenedor circular blanco. */}
-        <div className="absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1">
+        <div className="absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1"
+        onClick={() => context.setCount(context.count + 1)}
+        >
           +
         </div>
       </figure>
