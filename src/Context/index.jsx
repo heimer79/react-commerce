@@ -13,7 +13,7 @@ export const ShoppingCartProvider = ({ children }) => {
   const [ count, setCount ] = useState(0) 
 
 
-  console.log(count)
+  /* console.log(count) */
 
 
 

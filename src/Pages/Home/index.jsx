@@ -7,6 +7,8 @@ import { Card } from "../../Components/Card";
 // Importa el componente Layout desde el directorio ../../Components/Layout.
 import { Layout } from "../../Components/Layout";
 
+import { ProductDetail } from "../../Components/ProductDetail";
+
 /**
  * Renderiza el componente Home.
  *
@@ -44,6 +46,7 @@ export const Home = () => {
             return <Card key={item.id} data={item} />;
           })}
         </div>
+        <ProductDetail />
       </Layout>
     </>
   );
