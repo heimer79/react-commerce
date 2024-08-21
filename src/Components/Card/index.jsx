@@ -11,7 +11,9 @@ export const Card = (data) => {
   // Retorna el JSX que define la estructura del componente Card.
   return (
     // Contenedor principal de la tarjeta con estilos aplicados, como color de fondo, cursor, tamaño, y bordes redondeados.
-    <div className="bg-white cursor-pointer w-56 h-60 rounded-lg">
+    <div className="bg-white cursor-pointer w-56 h-60 rounded-lg"
+     onClick={() => context.openProductDetail()}
+    >
       {/* Figura que contiene la imagen y la etiqueta de la categoría. */}
       <figure className="relative mb-2 w-full h-4/5">
         {/* Etiqueta para mostrar el nombre de la categoría.

@@ -12,9 +12,25 @@ export const ShoppingCartProvider = ({ children }) => {
   // Usa el hook useState para crear una variable de estado llamada count y una función setCount para actualizarla, inicializada en 0
   const [count, setCount] = useState(0);
 
+  const [isProductDetailOpen, setIsProductDetailOpen] = useState(false);
+
+  const openProductDetail = () => {
+    setIsProductDetailOpen(true);
+  }
+
+  const closeProductDetail = () => {
+    setIsProductDetailOpen(false);
+  }
+
   // Retorna un componente ShopContext.Provider que provee el valor del estado count y la función setCount a sus hijos
   return (
-    <ShopContext.Provider value={{ count, setCount }}>
+    <ShopContext.Provider value={{ 
+      count, 
+      setCount, 
+      openProductDetail, 
+      closeProductDetail, 
+      isProductDetailOpen
+      }}>
       {children}
     </ShopContext.Provider>
   );

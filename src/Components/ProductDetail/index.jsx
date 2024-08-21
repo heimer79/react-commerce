@@ -1,4 +1,8 @@
+
+import { useContext } from 'react'
+import { ShopContext } from "../../Context"; 
 import {  XMarkIcon } from '@heroicons/react/24/solid'
+
 
 
 import './style.css'
@@ -8,9 +12,12 @@ import './style.css'
 
 // Componente funcional que representa el detalle de un producto
 export const ProductDetail = () => {
+
+  const context = useContext(ShopContext) // Importa el contexto 'ShopContext' para poder acceder a él.
+
   return (
     // Contenedor principal del detalle del producto con clases de estilo
-    <aside className='product-detail flex flex-col fixed right-0 border border-black rounded-lg bg-white'>
+    <aside className={`${context.isProductDetailOpen ? 'flex' : 'hidden'} product-detail  flex-col fixed right-0 border border-black rounded-lg bg-white`}>
         {/* Encabezado del detalle del producto */}
         <div className='flex justify-between items-center p-6'>
             {/* Título del detalle del producto */}
