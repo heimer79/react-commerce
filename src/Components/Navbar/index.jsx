@@ -72,10 +72,12 @@ export const Navbar = () => {
                         Sign In 
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink to="/cart" className={navLinkClass}>
-                    <ShoppingCartIcon className="size-6 text-blue-500" /> { context.count }
-                    </NavLink>
+                <li className="flex items-center">
+                    
+                      <ShoppingCartIcon className="size-6 text-black-500" /> 
+                      <div>{ context.count }</div>
+                      
+                   
                 </li>
             </ul>
         </nav>
